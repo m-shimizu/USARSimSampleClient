@@ -31,4 +31,4 @@ A sample client software for showing fundamental usage of RoboCupRescuePackage
 
 ### What you can see with this sample client  
      - Spawning 4 robots (1 sec innterval is required between each robot spawing, please see ~/USARSimRsampleClient/start_sample_client.bash)
-     - Camera image transfering with jpeg format (please see ~/USARSimRsampleClient/usarimage2ros.py)
+     - 4 robot's camera images transfered in jpeg format are shown on rviz (please see ~/USARSimRsampleClient/usarimage2ros.py, it gets a long jpeg camera image including 4 robot's camera image and cuts the long image into 4 ros image topic)
