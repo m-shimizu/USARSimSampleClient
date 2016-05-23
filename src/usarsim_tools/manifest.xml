@@ -1,0 +1,19 @@
+<package>
+  <description brief="usarsim_tools">
+
+     usarsim_tools
+
+  </description>
+  <author>Teddy Weisman</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/usarsim_tools</url>
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="usarsim_inf" />
+  <depend package="arm_navigation_msgs" />
+  <depend package="planning_environment" />
+
+</package>
+
+

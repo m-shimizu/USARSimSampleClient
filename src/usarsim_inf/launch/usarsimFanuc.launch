@@ -1,0 +1,8 @@
+<launch>
+  <param name="usarsim/robotType" value="Fanuc_Robot_And_Rail" />
+  <param name="usarsim/hostname" value="tweety" />
+  <param name="usarsim/port" value="3000" />
+  <param name="usarsim/startPosition" value="RobotStart1" />
+  <param name="usarsim/odomSensor" value="GroundTruth" />
+  <node name="RosSim" pkg="usarsim_inf" type="usarsim_node"/>
+</launch>

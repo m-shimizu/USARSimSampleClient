@@ -1,0 +1,5 @@
+uint8 type
+uint8 UNKNOWN=0
+uint8 GRIPPER=1
+uint8 VACUUM=2
+uint8 TOOLCHANGER=3

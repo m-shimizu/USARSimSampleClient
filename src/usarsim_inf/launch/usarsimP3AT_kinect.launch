@@ -1,0 +1,18 @@
+<launch>
+  <param name = "robot_description" command = "cat $(find usarsim_inf)/urdf/P3AT.xml" />
+  <param name="usarsim/robotType" value="P3AT" />
+  <param name="usarsim/robotName" value="P3AT" />
+  <param name="usarsim/hostname" value="yosemite" />
+  <param name="usarsim/port" value="3000" />
+  <param name="usarsim/startPosition" value="RobotStart1" />
+  <param name="usarsim/odomSensor" value="GndTruth" />
+  <node name="RosSim" pkg="usarsim_inf" type="usarsim_node"/>
+  <!-- launch a scan command node -->
+  <!--node pkg="usarsim_tools" type="command_scan.py" name="scan_command" /-->
+  <!-- launch point cloud publisher nodelets -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="tf_state_publisher" />
+  <node pkg="nodelet" type="nodelet" name="kinect_nodelet_manager" args="manager" />
+  <node pkg="nodelet" type="nodelet" name="image_proc_nodelet" args="load image_proc/rectify kinect_nodelet_manager" />
+  <node pkg="nodelet" type="nodelet" name="depth_proc_nodelet" args="load depth_image_proc/point_cloud_xyz kinect_nodelet_manager" />
+
+</launch>

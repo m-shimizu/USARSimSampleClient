@@ -1,0 +1,30 @@
+<robot name = "twolink">
+<link name = "base_link" />
+<link name = "TwoLinkArm_link1">
+	<visual>
+		<origin xyz="1 0 0" rpy="0 0 0" />
+		<geometry>
+			<box size = "2 0.5 0.5" />
+		</geometry>
+	</visual>
+</link>
+<link name = "TwoLinkArm_link2">
+	<visual>
+		<origin xyz="1 0 0" rpy="0 0 0" />
+		<geometry>
+			<box size = "2 0.5 0.5" />
+		</geometry>
+	</visual>
+</link>
+<joint name = "Joint_1" type = "revolute">
+	<origin xyz="2.1 0 0" rpy = "0 0 0"/>
+	<axis xyz="0 0 1"/>
+	<parent link="TwoLinkArm_link1" />
+	<child link ="TwoLinkArm_link2" />
+	<limit lower = "-1.5707" upper = "1.5707" effort = "50" velocity = "10" />
+</joint>
+<joint name="base_joint" type="fixed">
+<parent link="base_link"/>
+<child link="TwoLinkArm_link1"/>
+</joint>
+</robot>

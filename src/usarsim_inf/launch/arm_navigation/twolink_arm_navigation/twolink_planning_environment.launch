@@ -1,0 +1,4 @@
+<launch>
+    <param name="robot_description" textfile="$(find usarsim_inf)/urdf/twolink.xml" />
+    <rosparam command="load" ns="robot_description_planning" file="$(find usarsim_twolink_arm_nav)/config/twolink_planning_description.yaml" />
+</launch>

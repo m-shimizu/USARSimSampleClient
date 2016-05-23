@@ -1,0 +1,8 @@
+<launch>
+  <param name="usarsim/robotType" value="P3AT" />
+  <param name="usarsim/hostname" value="tweety" />
+  <param name="usarsim/port" value="3000" />
+  <param name="usarsim/startPosition" value="Vehicle1" />
+  <param name="usarsim/odomSensor" value="GndTruth" />
+  <node name="RosSim" pkg="usarsim_inf" type="usarsim_node"/>
+</launch>
