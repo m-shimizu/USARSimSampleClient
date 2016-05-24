@@ -9,9 +9,9 @@ A sample client software for showing fundamental usage of RoboCupRescuePackage
 ## How to setup  
         $ cd ~  
         $ git clone https://github.com/m-shimizu/USARSimSampleClient  
-        $ cd USARSimSampleClient/src  
+        $ cd ~/USARSimSampleClient/src  
         $ catkin_init_workspace  
-        $ cd USARSimSampleClient  
+        $ cd ~/USARSimSampleClient  
         $ catkin_make  
 
 
