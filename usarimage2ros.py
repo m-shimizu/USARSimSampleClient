@@ -76,9 +76,9 @@ rospy.init_node('UDKView')
 rcvmsg=''
 smallPict=[]
 while True:
-    rcvmsg = clientsock.recv(65536) 
+    rcvmsg += clientsock.recv(65536) 
     try:
-        print len(rcvmsg)
+#        print len(rcvmsg)
         if (len(rcvmsg) == 0):
           break
         if ((len(rcvmsg)>5) and (len(rcvmsg) == (ord(rcvmsg[1])*math.pow(256,3)) + (ord(rcvmsg[2])*math.pow(256,2)) + (ord(rcvmsg[3])*256) + ord(rcvmsg[4])+5)):
@@ -175,7 +175,7 @@ while True:
 #            pub_E.publish(img_E)
             rcvmsg=''
             clientsock.sendall(c_msg)
-            print 'looping'
+#            print 'looping'
     except:
         print 'error'
         break
