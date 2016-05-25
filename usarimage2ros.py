@@ -82,7 +82,7 @@ while True:
         if (len(rcvmsg) == 0):
           break
         if ((len(rcvmsg)>5) and (len(rcvmsg) == (ord(rcvmsg[1])*math.pow(256,3)) + (ord(rcvmsg[2])*math.pow(256,2)) + (ord(rcvmsg[3])*256) + ord(rcvmsg[4])+5)):
-            if(ord(rcvmsg[0]) !=0): #case by jpeg data
+            if(ord(rcvmsg[0]) !=0): # jpeg data
                 im = pillow_image.open(StringIO(rcvmsg[5:]))
                 im_a=im.crop(box_A)
                 im_b=im.crop(box_B)
@@ -130,8 +130,7 @@ while True:
                 img_D.data = tuple(smallPict_D)
 #                img_E.data = tuple(smallPict_E)
                 #print len(img_A.data)
-                #jpeg to row
-#            else:   #row data
+#            else:   #raw data
 #                i,j=0,0
 #                smallPict=[]
 #                while i<240:
