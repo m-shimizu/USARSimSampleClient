@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <launch>
-  <param name="usarsim/robotType" value="pioneer3at_with_sensors_r" />
-  <param name="usarsim/robotName" value="pioneer3at_with_sensors_r" />
+  <param name="usarsim/robotType" value="turtlebot_with_sensors_r" />
+  <param name="usarsim/robotName" value="turtlebot_with_sensors_r" />
   <param name="usarsim/hostname" value="localhost" />
   <param name="usarsim/port" value="3000" />
   <param name="usarsim/startPosition" value="Point1" />
