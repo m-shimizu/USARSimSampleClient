@@ -29,6 +29,7 @@ A sample client software for showing fundamental usage of RoboCupRescuePackage
         $ ./start_sample_client.bash  
         (for robot pioneer2dx_with_sensors, use start_sample_client_p2dx.bash)
         (for robot turtlebot_with_sensors, use start_sample_client_turtlebot.bash)
+        (for robot crawler_robot, use start_sample_client_crwl.bash)
 
 ### What you can see with this sample client  
      - Spawning 4 robots (1 sec innterval is required between each robot spawing, please see ~/USARSimRsampleClient/start_sample_client.bash)
